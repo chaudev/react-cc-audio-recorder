@@ -1,0 +1,26 @@
+{
+  "name": "react-cc-audio-recorder",
+  "version": "1.0.1",
+  "description": "audio-recorder, react-audio-recorder, recorder",
+  "main": "audio.js",
+  "scripts": {
+    "test": "npm i react-cc-audio-recorder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaudev/react-cc-audio-recorder.git"
+  },
+  "keywords": [
+    "audio-recorder",
+    "react-audio-recorder",
+    "recorder",
+    "baochau",
+    "baochau9xx"
+  ],
+  "author": "baochau9xx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaudev/react-cc-audio-recorder/issues"
+  },
+  "homepage": "https://github.com/chaudev/react-cc-audio-recorder#readme"
+}
