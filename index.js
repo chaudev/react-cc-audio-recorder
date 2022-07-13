@@ -175,13 +175,4 @@ var Recorder = (function () {
   };
 })();
 
-const StopRecorder = (callBack) => {
-  Recorder.stop(callBack);
-};
-
-const StartRecorder = () => {
-  Recorder.start();
-};
-
-export { StartRecorder, StopRecorder };
 export default Recorder;
