@@ -1,8 +1,8 @@
 {
   "name": "react-cc-audio-recorder",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "audio-recorder, react-audio-recorder, recorder",
-  "main": "audio.js",
+  "main": "index.js",
   "scripts": {
     "test": "npm i react-cc-audio-recorder"
   },
