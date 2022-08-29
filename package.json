@@ -1,7 +1,7 @@
 {
   "name": "react-cc-audio-recorder",
-  "version": "1.0.6",
-  "description": "audio-recorder, react-audio-recorder, recorder",
+  "version": "1.0.8",
+  "description": "audio-recorder, react-audio-recorder, react-cc-audio-recorder, react-cc-recorder, react-cc, recorder",
   "main": "index.js",
   "scripts": {
     "test": "npm i react-cc-audio-recorder"
@@ -13,6 +13,11 @@
   "keywords": [
     "audio-recorder",
     "react-audio-recorder",
+    "react-cc-audio-recorder",
+    "react-cc-audio",
+    "react-cc",
+    "mona-media",
+    "react-cc-recorder",
     "recorder",
     "baochau",
     "baochau9xx"

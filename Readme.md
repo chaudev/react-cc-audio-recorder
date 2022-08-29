@@ -51,6 +51,7 @@ const stop = () => {
 ## Contribute
 
 - _Thank you so much for helping me complete this project!_
+- Homepage: https://www.npmjs.com/package/react-cc-audio-recorder
 - Source: http://danml.com/js/recaudio.js
 - Refer: http://typedarray.org/wp-content/projects/WebAudioRecorder
 
@@ -62,7 +63,8 @@ const stop = () => {
 
 ## Keyword
 
-- audio-recorder, react-audio-recorder, recorder
+- audio-recorder, react-audio-recorder, react-cc-audio-recorder, recorder
 - audioRecorder, reactAudioRecorder, Recorder
+- react-cc-audio, react-cc
 - record-audio, recordAudio, Audio
 - baochau, baochau9xx
