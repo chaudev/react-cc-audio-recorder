@@ -2,6 +2,11 @@
 
 <img src="https://img.shields.io/badge/version-1.0.0-4CAF50"/>
 
+## Document
+
+- Website: [https://ischau.org/react-cc-audio-recorder](https://ischau.org/react-cc-audio-recorder)
+- More: [https://ischau.org](https://ischau.org)
+
 ## Installation
 
 ```sh
@@ -57,6 +62,7 @@ const stop = () => {
 
 ## Contact
 
+- Website: https://ischau.org/baochau9xx
 - Telegram: https://t.me/baochau9xx
 - Facebook: https://facebook.com/baochau9xx
 - Mail: chau.02it@gmail.com
@@ -67,4 +73,4 @@ const stop = () => {
 - audioRecorder, reactAudioRecorder, Recorder
 - react-cc-audio, react-cc
 - record-audio, recordAudio, Audio
-- baochau, baochau9xx
+- baochau, baochau9xx, ischau, ischau.org

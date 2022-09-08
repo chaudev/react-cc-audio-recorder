@@ -1,6 +1,6 @@
 {
   "name": "react-cc-audio-recorder",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "audio-recorder, react-audio-recorder, react-cc-audio-recorder, react-cc-recorder, react-cc, recorder",
   "main": "index.js",
   "scripts": {
@@ -16,11 +16,11 @@
     "react-cc-audio-recorder",
     "react-cc-audio",
     "react-cc",
-    "mona-media",
     "react-cc-recorder",
     "recorder",
     "baochau",
-    "baochau9xx"
+    "baochau9xx",
+    "ischau"
   ],
   "author": "baochau9xx",
   "license": "ISC",
