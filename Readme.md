@@ -1,6 +1,6 @@
 ## REACT CC AUDIO RECORDER
 
-<img src="https://img.shields.io/badge/version-1.0.0-4CAF50"/>
+<img src="https://img.shields.io/badge/version-1.1.0-4CAF50"/>
 
 ## Document
 
