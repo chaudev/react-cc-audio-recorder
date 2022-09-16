@@ -62,7 +62,7 @@ const stop = () => {
 
 ## Contact
 
-- Website: https://ischau.org/baochau9xx
+- Website: https://ischau.org
 - Telegram: https://t.me/baochau9xx
 - Facebook: https://facebook.com/baochau9xx
 - Mail: chau.02it@gmail.com

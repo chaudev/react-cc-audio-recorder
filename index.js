@@ -3,6 +3,8 @@
 // Refer: http://typedarray.org/wp-content/projects/WebAudioRecorder
 // Power by Nguyen Chau
 
+// @ts-nocheck
+
 var Recorder = (function () {
   // variables
   var leftchannel = [],
@@ -12,33 +14,48 @@ var Recorder = (function () {
     recordingLength = 0,
     volume = null,
     audioInput = null,
-    sampleRate = 16000,
+    sampleRate = null,
     audioContext = null,
     context = null,
     outputElement = {};
 
-  // feature detection
-  if (!navigator.getUserMedia)
-    navigator.getUserMedia =
-      navigator.getUserMedia ||
-      navigator.webkitGetUserMedia ||
-      navigator.mozGetUserMedia ||
-      navigator.msGetUserMedia;
-
-  if (navigator.getUserMedia) {
-    navigator.getUserMedia({ audio: true }, success, function (e) {
-      alert("Error capturing audio.");
-    });
-  } else alert("getUserMedia not supported in this browser.");
-
   function startRecording() {
+    // feature detection
+    if (!window?.navigator?.getUserMedia)
+      navigator.getUserMedia =
+        navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia;
+
+    if (!!navigator && navigator?.getUserMedia) {
+      navigator.getUserMedia({ audio: true }, success, function (e) {
+        alert("Error capturing audio.");
+      });
+    } else if (!!navigator?.mediaDevices) {
+      navigator.mediaDevices
+        .getUserMedia({ audio: true, video: false })
+        .then((mediaStream) => success(mediaStream))
+        .catch((err) => console.error(`${err.name}: ${err.message}`));
+    } else alert("Audio not supported in this browser.");
+
     recording = true;
     // reset the buffers for the new recording
     leftchannel.length = rightchannel.length = 0;
     recordingLength = 0;
     outputElement.innerHTML = "Recording now...";
     // if S is pressed, we stop the recording and package the WAV file
-  } // end startRecording()
+  }
+
+  function closeMic() {
+    audioInput?.mediaStream?.getAudioTracks().forEach(function (track) {
+      track.stop();
+    });
+
+    recorder.disconnect(0);
+    audioInput.disconnect(0);
+    volume.disconnect(0);
+  }
 
   function stopRecording(callBack) {
     // we stop recording
@@ -90,13 +107,17 @@ var Recorder = (function () {
     outputElement.innerHTML = "Handing off the file now...";
     var url = (window.URL || window.webkitURL).createObjectURL(blob);
 
+    recording = false;
+
+    closeMic();
+
     callBack({
       url,
       blob,
-      power: "https://facebook.com/baochau9xx",
+      power: "https://ischau.org",
       timeStamp: new Date().getTime(),
     });
-  } //end stopRecording()
+  }
 
   function interleave(leftChannel, rightChannel) {
     var length = leftChannel.length + rightChannel.length;
@@ -136,7 +157,7 @@ var Recorder = (function () {
     audioContext = window.AudioContext || window.webkitAudioContext;
     context = new audioContext();
 
-    // sampleRate = context?.sampleRate
+    sampleRate = context.sampleRate;
 
     // creates a gain node
     volume = context.createGain();
