@@ -1,6 +1,6 @@
 {
   "name": "react-cc-audio-recorder",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "audio-recorder, react-audio-recorder, react-cc-audio-recorder, react-cc-recorder, react-cc, recorder",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,8 @@
     "baochau",
     "baochau9xx",
     "ischau",
-    "ischau.org"
+    "ischau.org",
+    "dovuihainao"
   ],
   "author": "baochau9xx",
   "license": "ISC",
